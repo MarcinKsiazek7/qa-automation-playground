@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="proj-countryinfo" name="CountryInfo" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+    <con:settings/>
+    <con:interface xsi:type="con:WsdlInterface" name="CountryInfoService" type="wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:definition>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL</con:definition>
+        <con:operation name="CountryISOCode">
+            <con:request name="GetCountryISOCode" id="req1">
+                <con:requestContent><![CDATA[
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:CountryISOCode>
+         <web:sCountryName>Poland</web:sCountryName>
+      </web:CountryISOCode>
+   </soapenv:Body>
+</soapenv:Envelope>
+]]></con:requestContent>
+            </con:request>
+        </con:operation>
+    </con:interface>
+</con:soapui-project>
